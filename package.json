@@ -1,7 +1,7 @@
 {
-  "name": "nuget-package-template",
+  "name": "component-api-extensions",
   "version": "0.0.0-development",
-  "description": "Example nuget package repo using semantic release",
+  "description": "Nuget package repo for webapi extensions",
   "main": "index.js",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.2",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Architected/nuget-package-template.git"
+    "url": "git+https://github.com/devperimental/component-api-extensions.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Architected/nuget-package-template/issues"
+    "url": "https://github.com/devperimental/component-api-extensions/issues"
   },
-  "homepage": "https://github.com/Architected/nuget-package-template#readme"
+  "homepage": "https://github.com/devperimental/component-api-extensions#readme"
 }

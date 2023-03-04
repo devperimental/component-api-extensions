@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Useful.Implementation\Useful.Implementation.csproj" />
+    <ProjectReference Include="..\PlatformX.Startup\PlatformX.Startup.csproj" />
   </ItemGroup>
 
 </Project>
