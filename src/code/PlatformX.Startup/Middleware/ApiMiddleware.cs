@@ -20,7 +20,7 @@ namespace PlatformX.Startup.Middleware
                 app.UseSwaggerUI(c =>
                 {
                     c.InjectJavascript("https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.17.0/swagger-ui-bundle.js");
-                    c.RoutePrefix= "";
+                    c.RoutePrefix= "swagger";
                     c.SwaggerEndpoint("swagger/v1/swagger.json", "v1");
                 });
             }
