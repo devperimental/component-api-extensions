@@ -9,6 +9,11 @@ namespace PlatformX.Startup.Extensions
 {
     public static class AwsExtensions
     {
+        public static void AddAwsResources(this IServiceCollection services)
+        {
+            services.AddSecretsManager();
+        }
+
         public static void AddSecretsManager(this IServiceCollection services)
         {
             services.AddSingleton(typeof(IAmazonSecretsManager), c => {
