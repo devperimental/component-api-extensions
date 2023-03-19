@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PlatformX.Common.Constants;
 using PlatformX.Common.Types.DataContract;
 using System.Reflection;
 
@@ -72,23 +73,26 @@ namespace PlatformX.Startup.Extensions
                 options.ForwardedHeaders = ForwardedHeaders.All;
             });
 
-            services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen(c =>
+            if (bootstrapConfiguration.EnvironmentName != EnvironmentName.Production)
             {
-                if (openApiInfo != null)
+                services.AddEndpointsApiExplorer();
+                services.AddSwaggerGen(c =>
                 {
-                    c.SwaggerDoc(openApiInfo.Version, openApiInfo);
-                }
+                    if (openApiInfo != null)
+                    {
+                        c.SwaggerDoc(openApiInfo.Version, openApiInfo);
+                    }
 
-                var xmlFileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                    var xmlFileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
 
-                if (File.Exists(xmlFileName))
-                {
-                    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFileName));  
-                }
+                    if (File.Exists(xmlFileName))
+                    {
+                        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFileName));
+                    }
 
-                c.EnableAnnotations();
-            });
+                    c.EnableAnnotations();
+                });
+            }
 
             services.AddHealthChecks();
         }

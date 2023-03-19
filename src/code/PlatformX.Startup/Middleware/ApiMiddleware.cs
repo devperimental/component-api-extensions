@@ -25,7 +25,7 @@ namespace PlatformX.Startup.Middleware
                 });
             }
 
-            if (bootstrapConfiguration.EnvironmentName != EnvironmentName.Local)
+            if (bootstrapConfiguration.EnvironmentName == EnvironmentName.Production)
             {
                 app.UseHttpsRedirection();
             }
