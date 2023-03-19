@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/devperimental/component-api-extensions/compare/v1.1.0...v1.2.0) (2023-03-17)
+
+
+### Bug Fixes
+
+* merge conflict ([e577049](https://github.com/devperimental/component-api-extensions/commit/e57704967fc48d6d93cbd8e11290ca951d47e100))
+
+
+### Features
+
+* update to latest version ([62c217f](https://github.com/devperimental/component-api-extensions/commit/62c217fbe357536f23e4e7dd7e38d9c22506d601))
+
 # [1.1.0](https://github.com/devperimental/component-api-extensions/compare/v1.0.0...v1.1.0) (2023-03-16)
 
 
