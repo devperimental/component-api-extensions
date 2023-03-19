@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/devperimental/component-api-extensions/compare/v1.2.0...v1.3.0) (2023-03-19)
+
+
+### Features
+
+* updates to libs ([51ab3ff](https://github.com/devperimental/component-api-extensions/commit/51ab3ffc2de8a611019e46abb89bd2860208f7ea))
+
 # [1.3.0-alpha-4.1](https://github.com/devperimental/component-api-extensions/compare/v1.2.0...v1.3.0-alpha-4.1) (2023-03-19)
 
 
