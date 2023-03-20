@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/devperimental/component-api-extensions/compare/v1.3.0...v1.3.1) (2023-03-20)
+
+
+### Bug Fixes
+
+* refresh versions ([8d876da](https://github.com/devperimental/component-api-extensions/commit/8d876daa0efeda46ca0e87bf4c1c19bb0b917a27))
+
 ## [1.3.1-alpha-5.1](https://github.com/devperimental/component-api-extensions/compare/v1.3.0...v1.3.1-alpha-5.1) (2023-03-20)
 
 
