@@ -1,4 +1,5 @@
 ﻿using Amazon;
+using Amazon.S3;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Extensions.Caching;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,7 @@ namespace PlatformX.Startup.Extensions
         public static void AddAwsResources(this IServiceCollection services)
         {
             services.AddSecretsManager();
+            services.AddS3Client();
         }
 
         public static void AddSecretsManager(this IServiceCollection services)
@@ -32,6 +34,14 @@ namespace PlatformX.Startup.Extensions
             });
 
             services.AddSingleton<ISecretClient, AwsSecretsManagerClient>();
+        }
+
+        public static void AddS3Client(this IServiceCollection services)
+        {
+            services.AddSingleton(typeof(AmazonS3Client), c => {
+                var region = RegionEndpoint.GetBySystemName(RegionEndpoint.APSoutheast2.SystemName);
+                return new AmazonS3Client(region);
+            });
         }
     }
 }
