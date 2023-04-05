@@ -1,3 +1,15 @@
+# [1.4.0-alpha-5.1](https://github.com/devperimental/component-api-extensions/compare/v1.3.0...v1.4.0-alpha-5.1) (2023-04-05)
+
+
+### Bug Fixes
+
+* refresh versions ([8d876da](https://github.com/devperimental/component-api-extensions/commit/8d876daa0efeda46ca0e87bf4c1c19bb0b917a27))
+
+
+### Features
+
+* Add storage DI ([be1d936](https://github.com/devperimental/component-api-extensions/commit/be1d9367caa6c433be3adcc118bd1a4e899576ed))
+
 # [1.3.0](https://github.com/devperimental/component-api-extensions/compare/v1.2.0...v1.3.0) (2023-03-19)
 
 
