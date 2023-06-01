@@ -12,6 +12,13 @@ namespace PlatformX.Startup.Extensions
 {
     public static class ApiExtensions
     {
+        /// <summary>
+        /// Add Container Service
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration"></param>
+        /// <param name="loggingBuilder"></param>
+        /// <param name="bootstrapConfiguration"></param>
         public static void AddContainerService(this IServiceCollection services, 
             IConfiguration configuration, 
             ILoggingBuilder loggingBuilder,
@@ -27,6 +34,12 @@ namespace PlatformX.Startup.Extensions
 
         }
 
+        /// <summary>
+        /// AddLambdaService
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration"></param>
+        /// <param name="bootstrapConfiguration"></param>
         public static void AddLambdaService(this IServiceCollection services,
             IConfiguration configuration,
             BootstrapConfiguration bootstrapConfiguration)
