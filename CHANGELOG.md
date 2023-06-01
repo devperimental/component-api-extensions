@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.2](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.1...v1.4.0-alpha-5.2) (2023-06-01)
+
+
+### Features
+
+* fix namespace ([4aa4110](https://github.com/devperimental/component-api-extensions/commit/4aa4110f091a822ffa292f244666475828b2863a))
+
 ### Bug Fixes
 
 - refresh versions ([8d876da](https://github.com/devperimental/component-api-extensions/commit/8d876daa0efeda46ca0e87bf4c1c19bb0b917a27))
