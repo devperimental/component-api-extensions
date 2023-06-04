@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.3](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.2...v1.4.0-alpha-5.3) (2023-06-01)
+
+
+### Features
+
+* Tweak ([3cbbfce](https://github.com/devperimental/component-api-extensions/commit/3cbbfcef3d6adcdd8bc9ece223a39d7e32a984ca))
+
 # [1.4.0-alpha-5.2](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.1...v1.4.0-alpha-5.2) (2023-06-01)
 
 
