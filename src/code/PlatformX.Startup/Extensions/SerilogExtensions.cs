@@ -36,9 +36,9 @@ namespace PlatformX.Startup.Extensions
 
         public static Logger ConfigureLogger()
         {
-            var environmentName = Environment.GetEnvironmentVariable("ENVIRONMENT_NAME");
-            var aspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNET_CORE_ENVIRONMENT_NAME");
-            var applicationName = Environment.GetEnvironmentVariable("APPLICATION_NAME");
+            var environmentName = Environment.GetEnvironmentVariable("ENVIRONMENT_NAME") ?? "EMPTY";
+            var aspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNET_CORE_ENVIRONMENT_NAME") ?? "EMPTY";
+            var applicationName = Environment.GetEnvironmentVariable("APPLICATION_NAME") ?? "EMPTY";
 
             var loggerConfiguration = new LoggerConfiguration()
                 .MinimumLevel.Debug()
