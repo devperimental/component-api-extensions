@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.4](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.3...v1.4.0-alpha-5.4) (2023-06-04)
+
+
+### Features
+
+* refresh to v7 ([c3c96c5](https://github.com/devperimental/component-api-extensions/commit/c3c96c564e4bbad8600fdeae1c56ef68a80c6896))
+
 # [1.4.0-alpha-5.3](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.2...v1.4.0-alpha-5.3) (2023-06-01)
 
 
