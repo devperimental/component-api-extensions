@@ -41,13 +41,14 @@ namespace PlatformX.Startup.Extensions
         public static Logger ConfigureLogger()
         {
             var environmentName = Environment.GetEnvironmentVariable("ENVIRONMENT_NAME") ?? "EMPTY";
-            var aspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNET_CORE_ENVIRONMENT_NAME") ?? "EMPTY";
+            var aspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "EMPTY";
             var applicationName = Environment.GetEnvironmentVariable("APPLICATION_NAME") ?? "EMPTY";
 
             var loggerConfiguration = new LoggerConfiguration()
-                .MinimumLevel.Debug()
+                .MinimumLevel.Information()
                 .MinimumLevel.Override("Default", LogEventLevel.Information)
-                .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Information)
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                .MinimumLevel.Override("System", LogEventLevel.Warning)
                 .Destructure.UsingAttributes()
                 .Enrich.WithProperty("EnvironmentName", environmentName)
                 .Enrich.WithProperty("AspnetCoreEnvironmentName", aspNetCoreEnvironmentName)
