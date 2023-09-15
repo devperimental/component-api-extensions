@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.6](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.5...v1.4.0-alpha-5.6) (2023-09-15)
+
+
+### Features
+
+* add local cloudwatch logging ([bca13ce](https://github.com/devperimental/component-api-extensions/commit/bca13ceabee071f318664b59854c3fbd00cff8d1))
+
 # [1.4.0-alpha-5.5](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.4...v1.4.0-alpha-5.5) (2023-09-13)
 
 
