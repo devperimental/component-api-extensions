@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.9](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.8...v1.4.0-alpha-5.9) (2023-11-18)
+
+
+### Features
+
+* package updates ([c12b8f7](https://github.com/devperimental/component-api-extensions/commit/c12b8f7b98077aa783a4ee65ef2c77e54a21ccfd))
+
 # [1.4.0-alpha-5.8](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.7...v1.4.0-alpha-5.8) (2023-11-18)
 
 
