@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.7](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.6...v1.4.0-alpha-5.7) (2023-09-15)
+
+
+### Features
+
+* Tweak logging setup ([cd37612](https://github.com/devperimental/component-api-extensions/commit/cd376127a178115145cc86fefe75f804f82f2638))
+
 # [1.4.0-alpha-5.6](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.5...v1.4.0-alpha-5.6) (2023-09-15)
 
 
