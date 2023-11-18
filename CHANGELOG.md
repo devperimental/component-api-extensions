@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.8](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.7...v1.4.0-alpha-5.8) (2023-11-18)
+
+
+### Features
+
+* downgrade to .net60 ([58bb26b](https://github.com/devperimental/component-api-extensions/commit/58bb26b643ba33681f9c0a4c6304764be67bef4c))
+
 # [1.4.0-alpha-5.7](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.6...v1.4.0-alpha-5.7) (2023-09-15)
 
 
