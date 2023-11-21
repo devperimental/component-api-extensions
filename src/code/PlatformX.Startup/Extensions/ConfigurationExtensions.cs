@@ -10,7 +10,7 @@ namespace PlatformX.Startup.Extensions
             var bootstrapConfiguration = new BootstrapConfiguration
             {
                 EnvironmentName = Environment.GetEnvironmentVariable("ENVIRONMENT_NAME"),
-                AspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNET_CORE_ENVIRONMENT_NAME"),
+                AspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"),
                 Prefix = Environment.GetEnvironmentVariable("PREFIX"),
                 RoleKey = Environment.GetEnvironmentVariable("ROLEKEY"),
                 PortalName = Environment.GetEnvironmentVariable("PORTAL_NAME"),
