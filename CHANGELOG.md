@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.10](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.9...v1.4.0-alpha-5.10) (2023-11-21)
+
+
+### Features
+
+* update ASPNETCORE_ENVIRONMENT ([0d324cc](https://github.com/devperimental/component-api-extensions/commit/0d324ccf1af7899606c9e7159bc1816904b1762e))
+
 # [1.4.0-alpha-5.9](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.8...v1.4.0-alpha-5.9) (2023-11-18)
 
 
