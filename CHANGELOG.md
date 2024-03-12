@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.11](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.10...v1.4.0-alpha-5.11) (2024-03-12)
+
+
+### Features
+
+* downgrade to 6.4 for .net 6 ([a701cb1](https://github.com/devperimental/component-api-extensions/commit/a701cb16976912618687acba82f85cd25e4f4965))
+
 # [1.4.0-alpha-5.10](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.9...v1.4.0-alpha-5.10) (2023-11-21)
 
 
