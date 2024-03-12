@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.12](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.11...v1.4.0-alpha-5.12) (2024-03-12)
+
+
+### Features
+
+* add sec ([88b4962](https://github.com/devperimental/component-api-extensions/commit/88b4962cc736088f306e21bb2835551dadd0a373))
+
 # [1.4.0-alpha-5.11](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.10...v1.4.0-alpha-5.11) (2024-03-12)
 
 
