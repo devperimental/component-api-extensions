@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.13](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.12...v1.4.0-alpha-5.13) (2024-03-12)
+
+
+### Features
+
+* add header info ([5b4bd8a](https://github.com/devperimental/component-api-extensions/commit/5b4bd8a4bad5ad41d8d1a8e5b8535b03d1864a01))
+
 # [1.4.0-alpha-5.12](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.11...v1.4.0-alpha-5.12) (2024-03-12)
 
 
