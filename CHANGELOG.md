@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.14](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.13...v1.4.0-alpha-5.14) (2024-07-14)
+
+
+### Features
+
+* update serilog setup ([b1e4335](https://github.com/devperimental/component-api-extensions/commit/b1e4335e4a1f2e3eb180d6d196fc810c393caadb))
+
 # [1.4.0-alpha-5.13](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.12...v1.4.0-alpha-5.13) (2024-03-12)
 
 
