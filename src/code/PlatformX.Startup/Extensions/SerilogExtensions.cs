@@ -30,8 +30,7 @@ namespace PlatformX.Startup.Extensions
 
         public static void AddSerilog(this IServiceCollection services)
         {
-            var logger = ConfigureLogger();
-
+            Log.Logger = ConfigureLogger();
             services.AddLogging(lb =>
             {
                 lb.AddSerilog(Log.Logger, true);
