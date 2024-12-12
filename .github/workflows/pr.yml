@@ -11,20 +11,6 @@ env:
   team-pat: ${{ secrets.NUGET_PAT}}
 concurrency: alpha-${{ github.ref}}
 jobs:
-  codereview:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: AICodeReviewer
-        uses: devperimental/ai-codereviewer@main
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # The GITHUB_TOKEN is there by default so you just need to keep it like it is and not necessarily need to add it as secret as it will throw an error. [More Details](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret)
-          OPENAI_API_KEY: ${{ secrets.OPEN_API_KEY }} 
-          OPENAI_API_MODEL: gpt-4
-          exclude: "**/*.json, **/*.md,yarn.lock,dist/**,.github/**,**/*.dll,**/*.pdb,**/*.exe"
-  
   dotnetBuild:
     name: Build and Test
     runs-on: ubuntu-latest
@@ -44,3 +30,16 @@ jobs:
           coverage-threshold: ${{ env.coverage-threshold }}
           repo-organisation: ${{ env.repo-organisation }}
           team-pat: ${{ env.team-pat }}
+  codereview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: AICodeReviewer
+        uses: devperimental/ai-codereviewer@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # The GITHUB_TOKEN is there by default so you just need to keep it like it is and not necessarily need to add it as secret as it will throw an error. [More Details](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret)
+          OPENAI_API_KEY: ${{ secrets.OPEN_API_KEY }} 
+          OPENAI_API_MODEL: gpt-4
+          exclude: "**/*.json, **/*.md,yarn.lock,dist/**,.github/**,**/*.dll,**/*.pdb,**/*.exe"
