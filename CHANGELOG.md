@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.16](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.15...v1.4.0-alpha-5.16) (2024-12-12)
+
+
+### Bug Fixes
+
+* permissions ([61edce9](https://github.com/devperimental/component-api-extensions/commit/61edce9580357ababbc0ddf50d9628c19a0f0c63))
+
 # [1.4.0-alpha-5.15](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.14...v1.4.0-alpha-5.15) (2024-12-12)
 
 
