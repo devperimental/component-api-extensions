@@ -1,14 +1,10 @@
-﻿using Amazon.CloudWatchLogs;
-using Amazon.Runtime;
-using Destructurama;
+﻿using Destructurama;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
 using Serilog.Formatting.Json;
-using Serilog.Sinks.AwsCloudWatch;
-using System.Runtime.Serialization;
 
 namespace PlatformX.Startup.Extensions
 {
@@ -43,11 +39,14 @@ namespace PlatformX.Startup.Extensions
             var aspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "EMPTY";
             var applicationName = Environment.GetEnvironmentVariable("APPLICATION_NAME") ?? "EMPTY";
 
+            var microsoftLogLevel = environmentName == "prod" ? LogEventLevel.Error : LogEventLevel.Warning;
+            var systemLogLevel = environmentName == "prod" ? LogEventLevel.Error : LogEventLevel.Warning;
+
             var loggerConfiguration = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .MinimumLevel.Override("Default", LogEventLevel.Information)
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-                .MinimumLevel.Override("System", LogEventLevel.Warning)
+                .MinimumLevel.Override("Microsoft", microsoftLogLevel)
+                .MinimumLevel.Override("System", systemLogLevel)
                 .Destructure.UsingAttributes()
                 .Enrich.WithProperty("EnvironmentName", environmentName)
                 .Enrich.WithProperty("AspnetCoreEnvironmentName", aspNetCoreEnvironmentName)
@@ -58,33 +57,33 @@ namespace PlatformX.Startup.Extensions
                 .Enrich.FromLogContext()
                 .WriteTo.Console(new JsonFormatter());
 
-            if (Environment.GetEnvironmentVariable("LOG_TO_CLOUDWATCH") == "true")
-            {
-                var logGroupName = $"{applicationName}/{environmentName}";
+            //if (Environment.GetEnvironmentVariable("LOG_TO_CLOUDWATCH") == "true")
+            //{
+            //    var logGroupName = $"{applicationName}/{environmentName}";
 
-                var options = new CloudWatchSinkOptions
-                {
-                    // the name of the CloudWatch Log group for logging
-                    LogGroupName = logGroupName,
+            //    var options = new CloudWatchSinkOptions
+            //    {
+            //        // the name of the CloudWatch Log group for logging
+            //        LogGroupName = logGroupName,
 
-                    // the main formatter of the log event
-                    TextFormatter = new JsonFormatter(),
+            //        // the main formatter of the log event
+            //        TextFormatter = new JsonFormatter(),
 
-                    // other defaults defaults
-                    MinimumLogEventLevel = LogEventLevel.Information,
-                    BatchSizeLimit = 100,
-                    QueueSizeLimit = 10000,
-                    Period = TimeSpan.FromSeconds(10),
-                    CreateLogGroup = true,
-                    LogStreamNameProvider = new DefaultLogStreamProvider(),
-                    RetryAttempts = 5
-                };
+            //        // other defaults defaults
+            //        MinimumLogEventLevel = LogEventLevel.Information,
+            //        BatchSizeLimit = 100,
+            //        QueueSizeLimit = 10000,
+            //        Period = TimeSpan.FromSeconds(10),
+            //        CreateLogGroup = true,
+            //        LogStreamNameProvider = new DefaultLogStreamProvider(),
+            //        RetryAttempts = 5
+            //    };
 
-                // setup AWS CloudWatch client
-                var client = new AmazonCloudWatchLogsClient();
+            //    // setup AWS CloudWatch client
+            //    var client = new AmazonCloudWatchLogsClient();
 
-                loggerConfiguration.WriteTo.AmazonCloudWatch(options, client);
-            }
+            //    loggerConfiguration.WriteTo.AmazonCloudWatch(options, client);
+            //}
 
             var logger = loggerConfiguration.CreateLogger();
 
