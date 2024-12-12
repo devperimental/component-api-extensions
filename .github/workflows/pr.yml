@@ -31,12 +31,12 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
       - name: buildAndTest
-        uses: devperimental/composite-action-library/dotnet-build-and-test@v2
+        uses: devperimental/composite-action-library/dotnet-build-and-test@v4
         with:
           nuget-username: ${{ env.nuget-username }}
           src-dir: ${{ env.src-dir }}
