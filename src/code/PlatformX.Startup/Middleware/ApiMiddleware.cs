@@ -8,9 +8,13 @@ namespace PlatformX.Startup.Middleware
     {
         public static void UseApi(this IApplicationBuilder app, BootstrapConfiguration bootstrapConfiguration, Action customMiddleware)
         {
+            var swaggerBundlePath = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.17.0/swagger-ui-bundle.js";
+            var routePrefix = "swagger";
             app.UseForwardedHeaders();
+            var swaggerEndpointPath = "v1/swagger.json";
+            var swaggerEndpointVersion = "v1";
 
-            if(bootstrapConfiguration.EnvironmentName != EnvironmentName.Production)
+            if (bootstrapConfiguration.EnvironmentName != EnvironmentName.Production)
             {
                 app.UseSwagger(c =>
                 {
@@ -19,9 +23,9 @@ namespace PlatformX.Startup.Middleware
 
                 app.UseSwaggerUI(c =>
                 {
-                    c.InjectJavascript("https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.17.0/swagger-ui-bundle.js");
-                    c.RoutePrefix= "swagger";
-                    c.SwaggerEndpoint("v1/swagger.json", "v1");
+                    c.InjectJavascript(swaggerBundlePath);
+                    c.RoutePrefix= routePrefix;
+                    c.SwaggerEndpoint(swaggerEndpointPath, swaggerEndpointVersion);
                 });
             }
 

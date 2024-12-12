@@ -57,34 +57,6 @@ namespace PlatformX.Startup.Extensions
                 .Enrich.FromLogContext()
                 .WriteTo.Console(new JsonFormatter());
 
-            //if (Environment.GetEnvironmentVariable("LOG_TO_CLOUDWATCH") == "true")
-            //{
-            //    var logGroupName = $"{applicationName}/{environmentName}";
-
-            //    var options = new CloudWatchSinkOptions
-            //    {
-            //        // the name of the CloudWatch Log group for logging
-            //        LogGroupName = logGroupName,
-
-            //        // the main formatter of the log event
-            //        TextFormatter = new JsonFormatter(),
-
-            //        // other defaults defaults
-            //        MinimumLogEventLevel = LogEventLevel.Information,
-            //        BatchSizeLimit = 100,
-            //        QueueSizeLimit = 10000,
-            //        Period = TimeSpan.FromSeconds(10),
-            //        CreateLogGroup = true,
-            //        LogStreamNameProvider = new DefaultLogStreamProvider(),
-            //        RetryAttempts = 5
-            //    };
-
-            //    // setup AWS CloudWatch client
-            //    var client = new AmazonCloudWatchLogsClient();
-
-            //    loggerConfiguration.WriteTo.AmazonCloudWatch(options, client);
-            //}
-
             var logger = loggerConfiguration.CreateLogger();
 
             return logger;
