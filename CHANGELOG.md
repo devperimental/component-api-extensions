@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.15](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.14...v1.4.0-alpha-5.15) (2024-12-12)
+
+
+### Features
+
+* update for net8 ([607333e](https://github.com/devperimental/component-api-extensions/commit/607333ebe9a53ac417cf1f112db28c1a300d9a72))
+
 # [1.4.0-alpha-5.14](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.13...v1.4.0-alpha-5.14) (2024-07-14)
 
 
