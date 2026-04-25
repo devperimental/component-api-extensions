@@ -49,6 +49,7 @@ namespace PlatformX.Startup
                 Name = keyName,
                 SecretString = value
             });
+
             return createSecretResponse.HttpStatusCode == HttpStatusCode.Created || createSecretResponse.HttpStatusCode == HttpStatusCode.OK;
         }
 
