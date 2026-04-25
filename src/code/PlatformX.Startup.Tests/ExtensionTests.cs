@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace Useful.Implementation.Tests
+namespace PlatformX.Startup.Tests
 {
     [ExcludeFromCodeCoverage]
     public class ExtensionTests

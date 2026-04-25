@@ -1,9 +1,10 @@
 ﻿using Amazon;
+using Amazon.S3;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Extensions.Caching;
+using Amazon.StepFunctions;
 using Microsoft.Extensions.DependencyInjection;
-using PlatformX.Secrets.Aws;
-using PlatformX.Secrets.Shared.Behaviours;
+using PlatformX.Startup.Behaviours;
 
 namespace PlatformX.Startup.Extensions
 {
@@ -12,6 +13,8 @@ namespace PlatformX.Startup.Extensions
         public static void AddAwsResources(this IServiceCollection services)
         {
             services.AddSecretsManager();
+            services.AddS3Client();
+            services.AddStepFunctions();
         }
 
         public static void AddSecretsManager(this IServiceCollection services)
@@ -33,5 +36,22 @@ namespace PlatformX.Startup.Extensions
 
             services.AddSingleton<ISecretClient, AwsSecretsManagerClient>();
         }
+
+        public static void AddS3Client(this IServiceCollection services)
+        {
+            services.AddSingleton(typeof(AmazonS3Client), c => {
+                var region = RegionEndpoint.GetBySystemName(RegionEndpoint.APSoutheast2.SystemName);
+                return new AmazonS3Client(region);
+            });
+        }
+
+        public static void AddStepFunctions(this IServiceCollection services)
+        {
+            services.AddAWSService<IAmazonStepFunctions>(new Amazon.Extensions.NETCore.Setup.AWSOptions
+            {
+                Region = RegionEndpoint.APSoutheast2
+            });
+        }
+
     }
 }

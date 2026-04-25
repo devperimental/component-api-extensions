@@ -26,8 +26,7 @@ namespace PlatformX.Startup.Extensions
 
         public static void AddSerilog(this IServiceCollection services)
         {
-            var logger = ConfigureLogger();
-
+            Log.Logger = ConfigureLogger();
             services.AddLogging(lb =>
             {
                 lb.AddSerilog(Log.Logger, true);
@@ -36,14 +35,18 @@ namespace PlatformX.Startup.Extensions
 
         public static Logger ConfigureLogger()
         {
-            var environmentName = Environment.GetEnvironmentVariable("ENVIRONMENT_NAME");
-            var aspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNET_CORE_ENVIRONMENT_NAME");
-            var applicationName = Environment.GetEnvironmentVariable("APPLICATION_NAME");
+            var environmentName = Environment.GetEnvironmentVariable("ENVIRONMENT_NAME") ?? "EMPTY";
+            var aspNetCoreEnvironmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "EMPTY";
+            var applicationName = Environment.GetEnvironmentVariable("APPLICATION_NAME") ?? "EMPTY";
+
+            var microsoftLogLevel = environmentName == "prod" ? LogEventLevel.Error : LogEventLevel.Warning;
+            var systemLogLevel = environmentName == "prod" ? LogEventLevel.Error : LogEventLevel.Warning;
 
             var loggerConfiguration = new LoggerConfiguration()
-                .MinimumLevel.Debug()
+                .MinimumLevel.Information()
                 .MinimumLevel.Override("Default", LogEventLevel.Information)
-                .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Information)
+                .MinimumLevel.Override("Microsoft", microsoftLogLevel)
+                .MinimumLevel.Override("System", systemLogLevel)
                 .Destructure.UsingAttributes()
                 .Enrich.WithProperty("EnvironmentName", environmentName)
                 .Enrich.WithProperty("AspnetCoreEnvironmentName", aspNetCoreEnvironmentName)
@@ -53,6 +56,34 @@ namespace PlatformX.Startup.Extensions
                 .Enrich.WithMachineName()
                 .Enrich.FromLogContext()
                 .WriteTo.Console(new JsonFormatter());
+
+            //if (Environment.GetEnvironmentVariable("LOG_TO_CLOUDWATCH") == "true")
+            //{
+            //    var logGroupName = $"{applicationName}/{environmentName}";
+
+            //    var options = new CloudWatchSinkOptions
+            //    {
+            //        // the name of the CloudWatch Log group for logging
+            //        LogGroupName = logGroupName,
+
+            //        // the main formatter of the log event
+            //        TextFormatter = new JsonFormatter(),
+
+            //        // other defaults defaults
+            //        MinimumLogEventLevel = LogEventLevel.Information,
+            //        BatchSizeLimit = 100,
+            //        QueueSizeLimit = 10000,
+            //        Period = TimeSpan.FromSeconds(10),
+            //        CreateLogGroup = true,
+            //        LogStreamNameProvider = new DefaultLogStreamProvider(),
+            //        RetryAttempts = 5
+            //    };
+
+            //    // setup AWS CloudWatch client
+            //    var client = new AmazonCloudWatchLogsClient();
+
+            //    loggerConfiguration.WriteTo.AmazonCloudWatch(options, client);
+            //}
 
             var logger = loggerConfiguration.CreateLogger();
 
