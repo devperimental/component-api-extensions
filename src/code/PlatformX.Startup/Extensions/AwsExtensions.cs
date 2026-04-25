@@ -4,8 +4,7 @@ using Amazon.SecretsManager;
 using Amazon.SecretsManager.Extensions.Caching;
 using Amazon.StepFunctions;
 using Microsoft.Extensions.DependencyInjection;
-using PlatformX.Secrets.Aws;
-using PlatformX.Secrets.Shared.Behaviours;
+using PlatformX.Startup.Behaviours;
 
 namespace PlatformX.Startup.Extensions
 {
