@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.20](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.19...v1.4.0-alpha-5.20) (2026-04-25)
+
+
+### Features
+
+* force a version ([36e5c24](https://github.com/devperimental/component-api-extensions/commit/36e5c2495e553c0be98e46c84dfeca203f430461))
+
 # [1.4.0-alpha-5.19](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.18...v1.4.0-alpha-5.19) (2026-04-25)
 
 
