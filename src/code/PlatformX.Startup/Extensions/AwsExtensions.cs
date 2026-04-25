@@ -14,6 +14,7 @@ namespace PlatformX.Startup.Extensions
         {
             services.AddSecretsManager();
             services.AddS3Client();
+            services.AddStepFunctions();
         }
 
         public static void AddSecretsManager(this IServiceCollection services)
@@ -43,5 +44,14 @@ namespace PlatformX.Startup.Extensions
                 return new AmazonS3Client(region);
             });
         }
+
+        public static void AddStepFunctions(this IServiceCollection services)
+        {
+            services.AddAWSService<IAmazonStepFunctions>(new Amazon.Extensions.NETCore.Setup.AWSOptions
+            {
+                Region = RegionEndpoint.APSoutheast2
+            });
+        }
+
     }
 }
