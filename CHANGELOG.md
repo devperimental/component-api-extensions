@@ -1,3 +1,11 @@
+# [1.4.0-alpha-5.18](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.17...v1.4.0-alpha-5.18) (2026-04-25)
+
+
+### Features
+
+* fix dependancies ([d08cc8e](https://github.com/devperimental/component-api-extensions/commit/d08cc8eafc67d8f0b11e82f146465e3b7d221946))
+* upgrade aws libraries ([2e34560](https://github.com/devperimental/component-api-extensions/commit/2e34560582dd048db8031abdb978395007f47051))
+
 # [1.4.0-alpha-5.17](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.16...v1.4.0-alpha-5.17) (2025-01-27)
 
 
