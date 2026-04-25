@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.19](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.18...v1.4.0-alpha-5.19) (2026-04-25)
+
+
+### Features
+
+* add the secrets manager into the codebase ([81bd5d4](https://github.com/devperimental/component-api-extensions/commit/81bd5d4af624c612269e5846aed8a76e1f10b743))
+
 # [1.4.0-alpha-5.18](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.17...v1.4.0-alpha-5.18) (2026-04-25)
 
 
