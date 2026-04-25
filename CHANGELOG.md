@@ -1,3 +1,10 @@
+# [1.4.0-alpha-5.17](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.16...v1.4.0-alpha-5.17) (2025-01-27)
+
+
+### Features
+
+* update libraries for compatibility ([a201647](https://github.com/devperimental/component-api-extensions/commit/a20164705bca1454a17472df4d41e8dddee0069a))
+
 # [1.4.0-alpha-5.16](https://github.com/devperimental/component-api-extensions/compare/v1.4.0-alpha-5.15...v1.4.0-alpha-5.16) (2024-12-12)
 
 
